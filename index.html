@@ -2,51 +2,84 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css" />
+    
     <title>NETFLIX CLONE</title>
 </head>
 
-<!--Corpo da pagina-->
 <body>
 
-    <!---->
+    <!-- Cabeçalho -->
     <header>
         <div class="container">
             <h2 class="logo">NETFLIX</h2>
             <nav>
                 <a href="#">Início</a>
                 <a href="#">Séries</a>
-                <a href="#">Filmes</a>  
-                <a href="#">Documentarios</a>  
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
             </nav>
         </div>
     </header>
 
-    <!---->
+    <!-- Seção principal -->
     <main>
         <div class="filme-principal">
             <div class="container">
                 <h3 class="titulo">LUPIN - O LADRÃO DE CASACA</h3>
-                <p class="descricao">Inspirado pelas aventuras de Arsène Lupin, o ladrão gentil Assane Diop quer se vingar de uma família rica por uma injustiça cometida contra o pai dele. Assista agora a nova temporada de Lupin que esta imperdivel.</p>
+                <p class="descricao">
+                    Inspirado pelas aventuras de Arsène Lupin, o ladrão gentil Assane Diop quer se vingar de uma família rica por uma injustiça cometida contra o pai dele. Assista agora a nova temporada de Lupin que está imperdível.
+                </p>
                 <div class="botoes">
                     <button role="button" class="botao">
                         <i class="fa-solid fa-play"></i>
                         ASSISTIR AGORA
                     </button>
-
                     <button role="button" class="botao">
                         <i class="fa-solid fa-circle-info"></i>
                         MAIS INFORMAÇÕES
                     </button>
                 </div>
-            </div>   
+            </div>
         </div>
-
     </main>
 
-    <script src="https://kit.fontawesome.com/b6513d6771.js" crossorigin="anonymous"></script>
+    <!-- Carrossel de filmes -->
+    <section class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img class="box-filme" src="img/mini1.webp" alt="Filme 1"></div>
+            <div class="item"><img class="box-filme" src="img/mini2.webp" alt="Filme 2"></div>
+            <div class="item"><img class="box-filme" src="img/mini3.webp" alt="Filme 3"></div>
+            <div class="item"><img class="box-filme" src="img/mini4.webp" alt="Filme 4"></div>
+            <div class="item"><img class="box-filme" src="img/mini5.webp" alt="Filme 5"></div>
+            <div class="item"><img class="box-filme" src="img/mini6.webp" alt="Filme 6"></div>
+            <div class="item"><img class="box-filme" src="img/mini7.webp" alt="Filme 7"></div>
+            <div class="item"><img class="box-filme" src="img/mini8.webp" alt="Filme 8"></div>
+            <div class="item"><img class="box-filme" src="img/mini9.webp" alt="Filme 9"></div>
+            <div class="item"><img class="box-filme" src="img/mini10.webp" alt="Filme 10"></div>
+        </div>
+    </section>
 
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/b6513d6771.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 3 },
+                1000: { items: 5 }
+            }
+        });
+    </script>
 </body>
 </html>
